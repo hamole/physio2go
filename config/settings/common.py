@@ -40,12 +40,14 @@ THIRD_PARTY_APPS = (
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
+    'allauth.socialaccount.providers.google',
 )
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
     # custom users app
     'physio2go.users.apps.UsersConfig',
+    'physio2go.exercises.apps.ExercisesConfig',
     # Your stuff: custom apps go here
 )
 

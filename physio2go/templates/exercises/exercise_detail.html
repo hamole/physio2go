@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{{ program.title }} - {{ exercise.name }}{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h2>{{ exercise.name }}</h2>
+  <p>{{ exercise.description }}</p>
+  <p>{{ exercise.schedule }}</p>
+  <video width="320" height="240" controls>
+      <source src="{{ exercise.video.url }}" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+</div>
+{% endblock content %}

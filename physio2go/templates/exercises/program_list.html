@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}Program List{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h2>Programs</h2>
+
+  <div class="list-group">
+    {% for program in programs %}
+      <a href="{% url 'exercises:program_detail' program.slug %}" class="list-group-item">
+        <h4 class="list-group-item-heading">{{ program.title }}</h4>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
